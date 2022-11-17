@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Filament\Resources\UserResource;
+use Filament\Facades\Filament;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Filament::registerResources([UserResource::class]);
     }
 
     /**

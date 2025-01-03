@@ -3,7 +3,10 @@
 namespace App\Providers;
 
 use App\Filament\Resources\UserResource;
+use App\MyCustomFilament\MyCustomFilament;
 use Filament\Facades\Filament;
+use Filament\Panel;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Filament::registerResources([UserResource::class]);
+        Log::info(__METHOD__);
     }
 
     /**
@@ -25,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Log::info(__METHOD__);
     }
 }
